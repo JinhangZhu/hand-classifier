@@ -118,7 +118,9 @@ Detection of samples example command:
 python hand_cnn.py --mode detect --weight weights/handcnn.pt --source samples
 ```
 
-### Compatible for integration
+### Easy integration
+
+Our implementation should be easy to be integrated into your codes.
 
 ```python
 model = HandCropCNN()
