@@ -99,7 +99,10 @@ def plot_samples(samples_path):
     for i, im_path in enumerate(imgs):
         img = cv2.imread(im_path)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        caption_loc = im_path.rfind('c')
+        caption = im_path[caption_loc: caption_loc+2]
         plt.subplot(1, n, i+1)
         plt.imshow(img)
+        plt.title(caption)
         plt.axis('off')
     plt.show()

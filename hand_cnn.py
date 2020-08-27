@@ -138,8 +138,8 @@ class HandCropCNN(nn.Module):
         if not os.path.isfile(weight_file):
             loss_func = nn.CrossEntropyLoss()
             if os.path.isfile(opt.save_txt + os.sep + 'loss_results.txt'):
-              os.remove(opt.save_txt + os.sep + 'loss_results.txt')
-              os.remove(opt.save_txt + os.sep + 'accuracy_results.txt')
+                os.remove(opt.save_txt + os.sep + 'loss_results.txt')
+                os.remove(opt.save_txt + os.sep + 'accuracy_results.txt')
         else:
             checkpoint = torch.load(weight_file)
             self.load_state_dict(checkpoint['model_state_dict'])
@@ -182,7 +182,6 @@ class HandCropCNN(nn.Module):
             )
             epoch_duration = time.time() - epoch_start_time
             print('\nEpoch lasts: %s' % (time.strftime('%H:%M:%S', time.gmtime(epoch_duration))))
-
 
         duration = time.time() - start_time
         print('\nTraining duration: %s' % (time.strftime('%H:%M:%S', time.gmtime(duration))))
