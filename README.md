@@ -8,7 +8,7 @@ Our CNN architecture is based on the R-Net in MTCNN[1].
 
 ![](https://i.loli.net/2020/08/27/cbMxJI7q3YiOesQ.png)
 
-Our dataset is based on [EPIC-KITCHENS-100](https://github.com/epic-kitchens/epic-kitchens-100-annotations) [2], an egocentric video dataset. In the image above are four examples from our dataset, where `c0`, `c1` mean `left_hand`, `right_hand`.
+Our dataset is based on [EPIC-KITCHENS-100](https://github.com/epic-kitchens/epic-kitchens-100-annotations) [2], an egocentric video dataset. In the image below are four examples from our dataset, where `c0`, `c1` mean `left_hand`, `right_hand`.
 
 ![](https://i.loli.net/2020/08/27/ByqMCiG7OJfeITD.png)
 
