@@ -283,27 +283,27 @@ if __name__ == "__main__":
         device = torch.device('cuda:0')
     else:
         print('Using CPU')
-        device = 'cpu'
+        device = torch.device('cpu')
 
     # Configure modes
     if opt.mode == 'train':
         print("Training...")
         cnn = HandCropCNN()
-        if device != 'cpu':
+        if device != torch.device('cpu'):
             cnn.cuda()
         cnn.train(device, opt)
 
     elif opt.mode == 'test':
         print("Evaluating...")
         cnn = HandCropCNN()
-        if device != 'cpu':
+        if device != torch.device('cpu'):
             cnn.cuda()
         cnn.test(device, opt)
 
     else:
         print("Detecting...")
         cnn = HandCropCNN()
-        if device != 'cpu':
+        if device != torch.device('cpu'):
             cnn.cuda()
         imgs = opt.source
         if isinstance(imgs, str):
