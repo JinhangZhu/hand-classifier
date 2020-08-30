@@ -124,7 +124,7 @@ Our implementation should be easy to be integrated into your codes.
 
 ```python
 model = HandCropCNN()
-device = torch.device('cuda:0')  if torch.cuda.is_available() else 'cpu'
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model.to(device)
 weight_file = 'weights/handcnn.pt'
 
